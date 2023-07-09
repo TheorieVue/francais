@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href:"favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon(1).ico" />
+    <link href="favicon(1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>VOCABULAIRE</title>
+  </head>
+
+  <body>
+    <div id="preLoader"></div>
+    <script>
+      var loader = document.getElementById("preLoader");
+
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+    <div>
+      <header>
+        <img
+          class="headerimg"
+          src="https://th.bing.com/th/id/R.fe036d83f26995c7d2f6512eeafcb074?rik=6RyQ3RT0x6WypA&riu=http%3a%2f%2f1.bp.blogspot.com%2f_kk0cAfja3x8%2fTUsq_w0_1gI%2fAAAAAAAABBA%2feloiWCODRsA%2fs1600%2ffrancais.jpg&ehk=Emkoomb20TcUfsYTXrGz3ClY1XtRTgFpPJg6%2fyhuagk%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        />
+        <h1>VOCABULAIRE</h1>
+      </header>
+      <section>
+        <article>
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <h2>
+            Ici vous trouverez le vocabulaire français déjà difficile avec la
+            traduction polonaise et allemande.
+          </h2>
+          <table class="tbl2">
+            <tr>
+              <th class="tbl3">FRANCAIS</th>
+              <th class="tbl3">ALLEMAND</th>
+            </tr>
+
+            <tr>
+              <td class="tbl3">le malfaiteur</td>
+              <td class="tbl3">der Übeltäter</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le hors-la-loi</td>
+              <td class="tbl3">der Verbrecher</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le jeune délinquant</td>
+              <td class="tbl3">der jugendliche Straftäter</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le gang</td>
+              <td class="tbl3">die Verbrecherbande</td>
+            </tr>
+
+            <tr>
+              <td class="tbl3">l'agresseur</td>
+              <td class="tbl3">der Angreifer</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le ravisseur</td>
+              <td class="tbl3">der Entführer</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le pyromane</td>
+              <td class="tbl3">der Brandstifter</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le tueur (le tueur à gages)</td>
+              <td class="tbl3">der Killer (der Profikiller)</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le complice</td>
+              <td class="tbl3">der Mittäter, der Komplize</td>
+            </tr>
+            <tr>
+              <td class="tbl3">commettre un délit</td>
+              <td class="tbl3">eine Straftat begehen</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le crime prémédité</td>
+              <td class="tbl3">das vorsätzliche Verbrechen</td>
+            </tr>
+            <tr>
+              <td class="tbl3">s'introduire dans un lieu</td>
+              <td class="tbl3">eindringen, sich Zutritt verschaffen</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le cambriolage</td>
+              <td class="tbl3">der Einbruch</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le vol à l'étalage</td>
+              <td class="tbl3">der Ladendiebstahl</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le vol à main armée</td>
+              <td class="tbl3">der bewaffnete Diebstahl</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le vol à la tire</td>
+              <td class="tbl3">der Taschendiebstahl</td>
+            </tr>
+            <tr>
+              <td class="tbl3">l'incendie volontaire</td>
+              <td class="tbl3">die Brandstiftung</td>
+            </tr>
+            <tr>
+              <td class="tbl3">la tentative de meurtre</td>
+              <td class="tbl3">der Mordversuch</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le meurtre, l'assassinat</td>
+              <td class="tbl3">der Mord</td>
+            </tr>
+            <tr>
+              <td class="tbl3">la série de meurtres</td>
+              <td class="tbl3">die Mordserie</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le kidnapping. l'enlèvement</td>
+              <td class="tbl3">die Entführung</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le lieu du crime</td>
+              <td class="tbl3">der Tatort</td>
+            </tr>
+            <tr>
+              <td class="tbl3">abattre qqn</td>
+              <td class="tbl3">jemanden erschießen, jemanden töten</td>
+            </tr>
+            <tr>
+              <td class="tbl3">l'arme du crime</td>
+              <td class="tbl3">die Tatwaffe</td>
+            </tr>
+            <tr>
+              <td class="tbl3">l'arme à feu</td>
+              <td class="tbl3">die Schusswaffe</td>
+            </tr>
+            <tr>
+              <td class="tbl3">brandir une arme</td>
+              <td class="tbl3">mit einer Waffe drohen</td>
+            </tr>
+            <tr>
+              <td class="tbl3">pointer une arme sur qn</td>
+              <td class="tbl3">eine Waffe auf jemanden richten</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le pistolet</td>
+              <td class="tbl3">die Pistole</td>
+            </tr>
+            <tr>
+              <td class="tbl3">tirer un coup de feu sur qn</td>
+              <td class="tbl3">auf jemanden schießen</td>
+            </tr>
+            <tr>
+              <td class="tbl3">tirer à bout portant</td>
+              <td class="tbl3">aus nächster Nähe schießen</td>
+            </tr>
+            <tr>
+              <td class="tbl3">la fusillade</td>
+              <td class="tbl3">die Schießerei</td>
+            </tr>
+            <tr>
+              <td class="tbl3">être armé et dangereux</td>
+              <td class="tbl3">bewaffnet und gefährlich sein</td>
+            </tr>
+            <tr>
+              <td class="tbl3">le butin</td>
+              <td class="tbl3">die Beute</td>
+            </tr>
+            <tr>
+              <td class="tbl3">s'échapper</td>
+              <td class="tbl3">entweichen</td>
+            </tr>
+          </table>
+          <h3>Ici des photos du vocabulaire (trop de code)</h3>
+        </article>
+      </section>
+      <section>
+        <article>
+          <img
+            class="imgvoc3"
+            src="images/vocab (1).jpeg"
+            alt="image du
+          vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (2).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (3).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (4).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (5).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (6).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (7).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (8).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (9).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (10).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (11).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (12).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (13).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (14).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (15).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (16).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (17).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (18).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (19).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (20).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (21).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (22).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (23).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (24).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (25).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (26).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (27).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (28).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (29).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (30).jpeg"
+            alt="image du vocabulaire"
+          />
+          <img
+            class="imgvoc3"
+            src="images/vocab (31).jpeg"
+            alt="image du vocabulaire"
+          />
+        </article>
+      </section>
+      <script type="text/javascript">
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight;
+        window.onscroll = function () {
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        };
+      </script>
+      <nav>
+        <a class="menu" href="index.html">HUB</a>
+        <a class="menu" href="fdm.html">fonction de mots</a>
+        <a class="menu" href="tdp.html">les types de phrases</a>
+        <a class="menu active" href="voc.html">vocabulaire</a>
+        <a class="menu" href="negot.html">negation</a>
+        <a class="menu" href="temps.html">Les temps "simples" et "composés"</a>
+        <a class="menu" href="pardv.html">les particularités de verbes</a>
+        <a class="menu" href="conjg.html">conjugaison</a>
+        <a class="menu" href="utltemps.html">l'utilisation des temps</a>
+        <a class="menu" href="autres.html">autres</a>
+      </nav>
+      <footer></footer>
+    </div>
+  </body>
+</html>

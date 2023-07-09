@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href:"favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon(1).ico" />
+    <link href="favicon(1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>La subordination relative</title>
+  </head>
+
+  <body>
+    <div id="preLoader"></div>
+    <script>
+      var loader = document.getElementById("preLoader");
+
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+    <div>
+      <header>
+        <img
+          class="headerimg"
+          src="https://th.bing.com/th/id/R.fe036d83f26995c7d2f6512eeafcb074?rik=6RyQ3RT0x6WypA&riu=http%3a%2f%2f1.bp.blogspot.com%2f_kk0cAfja3x8%2fTUsq_w0_1gI%2fAAAAAAAABBA%2feloiWCODRsA%2fs1600%2ffrancais.jpg&ehk=Emkoomb20TcUfsYTXrGz3ClY1XtRTgFpPJg6%2fyhuagk%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        />
+        <h1>La subordination relative</h1>
+      </header>
+      <section>
+        <article>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <script src="scripts.js"></script>
+
+          <h2>Préciser un nom avec une subordonnée relative</h2>
+          <h3>
+            Observons les phrases suivantes :<br />[C’est un modèle] [<span
+              class="red"
+              >que</span
+            >
+            j’ai remis à neuf presque entièrement. ]<br />[Je t’indiquerai de
+            bonnes adresses] [où tu pourras la faire repeindre.]<br />Nous
+            observons qu’il y a dans chaque exemple deux verbes conjugués, donc
+            deux propositions. Ce sont donc des phrases complexes.
+          </h3>
+          <h3>
+            Continuons notre observation :<br />C’est un modèle. Que j’ai remis
+            à neuf presque entièrement.<br />Nous constatons que la première
+            proposition peut être utilisée seule, mais qu’elle est moins
+            précise. La deuxième proposition est fausse ; elle ne peut pas être
+            employée seule. Elle dépend de la première.
+          </h3>
+          <h3>
+            Les subordonnées "que" et "où" (de notre exemple) ne dépendent pas
+            d’un verbe, mais d’un nom. Le mot qui introduit la subordination est
+            un pronom relatif. C’est pourquoi on appelle ce type de
+            subordination « subordonnée relative » .
+          </h3>
+          <h2>Les pronoms relatifs</h2>
+          <h3>
+            Ex : J’ai un ami qui s’occupera du toit ouvrant. (qui = pronom
+            relatif)<br />Il faut un pronom relatif pour rattacher la partie de
+            phrase au nom complété. Le pronom relatif a plusieurs formes parce
+            qu’il a plusieurs fonctions dans la subordonnée.<br />Ex : [J’ai un
+            ami] [qui s’occupera du toit ouvrant] => Un ami(SUJET) s’occupera du
+            toit ouvrant<br />[Le garçon [qui rêvait d’aventure] ne peut retenir
+            son enthousiasme.] => le garçon(SUJET) rêvait d’aventure<br />[C’est
+            un modèle] [que j’ai remis à neuf presque entièrement.] => il a
+            remis un modèle (COD)<br />[C’est la voiture] [dont tu parles
+            toujours.] => tu parles de cette voiture(COI)<br />[Je t’indiquerai
+            un bon atelier] [où on effectue un travail sérieux.] => on effectue
+            un travail sérieux dans cet atelier(CCL)
+          </h3>
+          <table>
+            <tr>
+              <th>Tableau récapulatif</th>
+              <th>Tableau récapulatif</th>
+            </tr>
+            <tr>
+              <td>sujet</td>
+              <td>qui</td>
+            </tr>
+            <tr>
+              <td>COD</td>
+              <td>que</td>
+            </tr>
+            <tr>
+              <td>COI</td>
+              <td>dont</td>
+            </tr>
+            <tr>
+              <td>CCL</td>
+              <td>où</td>
+            </tr>
+          </table>
+          <h3>
+            Le pronom relatif suit toujours immédiatement le nom complété<br />Alors,
+            j’écris : le plat, qui n'était pas très épicé, a été préparé par
+            Thomas
+          </h3>
+          <h2>La ponctuation</h2>
+          <h3>
+            En général on ne met pas de virgule entre une principale et une
+            subordonnée sauf dans certains cas. On met une relative entre
+            virgules quand elle coupe la principale en 2 et n'est pas absolument
+            nécessaire au sens de la phrase. On pourrait considérer ces virgules
+            comme des parenthèses qu'on ajouterait.<br />Ex : Toto,( qui rêvait
+            d'aventure) ne pourrait tenir son enthousiasme. Toto ne put retenir
+            son enthousiasme.<br />Dans l'exemple ci-dessus on voit que la
+            phrase reste tout à fait claire dans les 2 cas. La relative apporte
+            juste une précision supplémentaire.<br />Ex : L'oncle qui m'a offert
+            la 2 CV(deux chevaux, une voiture) à 64 ans. L'oncle a 64 ans.<br />Dans
+            ce cas-ci, la relative ne peut pas être laissée de côté, car la
+            phrase ne serait plus vraiment compréhensible : de quel oncle
+            s'agit-il ?<br />Je t’indiquerai un atelier où effectue un travail
+            sérieux.<br />C'est un modèle que j'ai presque entièrement restauré
+            moi-même.<br />Dans les exemples ci-dessus on ne met pas de virgules
+            parce que les relatives ne coupent pas la principale.
+          </h3>
+          <h2>Retenons</h2>
+          <ul>
+            <li>On peut compléter un nom avec une « subordonnée relative ».</li>
+            <li>
+              On relie la subordonnée relative au nom à l'aide d'un pronom
+              relatif.
+            </li>
+            <li>
+              La subordonnée relative se place directement derrière le nom
+              complété.
+            </li>
+            <li>
+              Le pronom relatif une fonction grammaticale dans la subordonnée :
+              qui (sujet), que (COD), dont (COI), où (CLL).
+            </li>
+            <li>
+              La subordonnée relative se place entre virgules quand elle coupe
+              la principale en 2 et qu'elle n'est pas nécessaire au sens de la
+              phrase.
+            </li>
+          </ul>
+
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <div id="blob"></div>
+        </article>
+      </section>
+      <script type="text/javascript">
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        };
+      </script>
+      <nav>
+        <a class="menu" href="index.html">HUB</a>
+        <a class="menu" href="fdm.html">fonction de mots</a>
+        <a class="menu" href="tdp.html">les types de phrases</a>
+        <a class="menu" href="voc.html">vocabulaire</a>
+        <a class="menu" href="negot.html">negation</a>
+        <a class="menu" href="temps.html">Les temps "simples" et "composés"</a>
+        <a class="menu" href="pardv.html">les particularités de verbes</a>
+        <a class="menu" href="conjg.html">conjugaison</a>
+        <a class="menu" href="utltemps.html">l'utilisation des temps</a>
+        <a class="menu" href="autres.html">autres</a>
+      </nav>
+      <footer></footer>
+    </div>
+  </body>
+</html>

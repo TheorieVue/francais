@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href:"favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon(1).ico" />
+    <link href="favicon(1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>L'UTILISATION DES TEMPS</title>
+  </head>
+
+  <body>
+    <div id="preLoader"></div>
+    <script>
+      var loader = document.getElementById("preLoader");
+
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+    <div>
+      <header>
+        <img
+          class="headerimg"
+          src="https://th.bing.com/th/id/R.fe036d83f26995c7d2f6512eeafcb074?rik=6RyQ3RT0x6WypA&riu=http%3a%2f%2f1.bp.blogspot.com%2f_kk0cAfja3x8%2fTUsq_w0_1gI%2fAAAAAAAABBA%2feloiWCODRsA%2fs1600%2ffrancais.jpg&ehk=Emkoomb20TcUfsYTXrGz3ClY1XtRTgFpPJg6%2fyhuagk%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        />
+        <h1>L'UTILISATION DES TEMPS</h1>
+      </header>
+      <section>
+        <article>
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <h2>Les temps du discours (présent)</h2>
+          <h3>
+            Il s’agit des temps qu’on utilise quand on parle. Il faut toujours
+            considérer le moment d’énonciation (moment, où l’on parle qqch).
+          </h3>
+          <h2>Mode indicatif</h2>
+          <table class="tbl3">
+            <tr>
+              <th>antériorité(avant)</th>
+              <th>simultanéité(en même temps)</th>
+              <th>postérité(après)</th>
+            </tr>
+            <tr>
+              <td>passé composé + imparfait</td>
+              <td>indicatif présent</td>
+              <td>futur simple + futur proche</td>
+            </tr>
+          </table>
+
+          <h2>Mode subjontif</h2>
+          <table class="tbl3">
+            <tr>
+              <th>antériorité(avant)</th>
+              <th>simultanéité(en même temps)</th>
+              <th>postérité(après)</th>
+            </tr>
+            <tr>
+              <td>subj. passé</td>
+              <td>subj. présent</td>
+              <td>subj. présent</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <script type="text/javascript">
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        };
+      </script>
+      <nav>
+        <a class="menu" href="index.html">HUB</a>
+        <a class="menu" href="fdm.html">fonction de mots</a>
+        <a class="menu" href="tdp.html">les types de phrases</a>
+        <a class="menu" href="voc.html">vocabulaire</a>
+        <a class="menu" href="negot.html">negation</a>
+        <a class="menu" href="temps.html">Les temps "simples" et "composés"</a>
+        <a class="menu" href="pardv.html">les particularités de verbes</a>
+        <a class="menu" href="conjg.html">conjugaison</a>
+        <a class="menu active" href="utltemps.html">l'utilisation des temps</a>
+        <a class="menu" href="autres.html">autres</a>
+      </nav>
+      <footer></footer>
+    </div>
+  </body>
+</html>

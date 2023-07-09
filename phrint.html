@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href:"favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon(1).ico" />
+    <link href="favicon(1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>PHRASE INTERROGATIVE</</title>
+  </head>
+
+  <body>
+    <div>
+      <div id="preLoader"></div>
+      <script>
+        var loader = document.getElementById("preLoader");
+
+        window.addEventListener("load", function () {
+          loader.style.display = "none";
+        });
+      </script>
+      <header>
+        <img
+          class="headerimg"
+          src="https://th.bing.com/th/id/R.fe036d83f26995c7d2f6512eeafcb074?rik=6RyQ3RT0x6WypA&riu=http%3a%2f%2f1.bp.blogspot.com%2f_kk0cAfja3x8%2fTUsq_w0_1gI%2fAAAAAAAABBA%2feloiWCODRsA%2fs1600%2ffrancais.jpg&ehk=Emkoomb20TcUfsYTXrGz3ClY1XtRTgFpPJg6%2fyhuagk%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        />
+        <h1>PHRASE INTERROGATIVE</h1>
+      </header>
+      <nav></nav>
+      <section>
+        <article>
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <h2 class="backgreen">L'interrogation totale</h2>
+
+          <h2>
+            1. L’interrogation totale se construit à l'aide de l'inversion ou de
+            " est-ce que ". Avec l'inversion, l'ordre S-V est inversé :
+          </h2>
+
+          <h3>
+            Ex: Passeras-tu ton permis cette année ? <br />
+            Aime-t-elle prendre le bus ?
+          </h3>
+          <h2>
+            2. le sujet est un nom, on le reprend grâce à un pronom placé
+            derrière le verbe. Un " t " de prononciation relie deux voyelles
+            consécutives.
+          </h2>
+          <h3>
+            Ex.: Alice a-t-elle passé son permis cette année ? <br />
+            Une voiture peut-elle rester garée pendant deux semaines au même
+            endroit ?
+          </h3>
+          <h2>
+            3. Dans l'interrogation par inversion, la plupart des adverbes de
+            négation entourent le verbe conjugué et son pronom de reprise.
+          </h2>
+          <h3>
+            Ex: N'êtes-vous plus détenteur d'un permis de conduire ? <br />
+            Le garagiste n'a-t-il pas trouvé de solution bon marché ? <br />
+            mais: Aucun garagiste n'a-t-il trouvé l'origine de la panne?
+          </h3>
+          <h2>
+            On répond par oui ou par non à une interrogation totale. Parfois, on
+            peut dire je ne sais pas.
+          </h2>
+          <h3>Par exemple : Est-ce qu’il est malade ?</h3>
+          <h3>==> Oui, il est malade.</h3>
+          <h3>==> Non, il n’est pas malade.</h3>
+          <h2>L'intention totale avec "est-ce que"</h2>
+          <br />
+          <h3>
+            Pour former cette question, il suffit de rajouter "est-ce que" à la
+            phrase déclarative.
+          </h3>
+          <h3>Est-ce que ta maison est belle?</h3>
+          <h3>Attention cependant au changement de quelques pronoms.</h3>
+          <h3>
+            Je ==> tu<br />
+            Me ==> te<br />
+            Moi ==> toi<br />
+            Mon, ma, mes ==> ton, ta, tes<br />
+            ...
+          </h3>
+          <h2>
+            Si la question est une phrase <span class="red">négative</span>, on
+            répond par <span class="red">"si"</span> ou
+            <span class="red">"non"</span>.
+          </h2>
+          <h3>
+            Est-ce que le professeur <span class="red">ne</span> vous a
+            <span class="red">pas</span> rendu vos devoirs?
+          </h3>
+          <h3>==> Si, il nous a rendu le devoir.</h3>
+          <h3>==> Non, il ne nous a pas rendu le devoir.</h3>
+          <h2 class="backgreen">L'interrogation partielle</h2>
+
+          <h2>
+            Une interrogation est partielle lorsqu'on ne peut pas y répondre par
+            oui par non, mais qu'il faut répondre avec une information précise.
+          </h2>
+
+          <h2>
+            1. Avec que, où est / où sont et quelle est / quelles sont, on met
+            le sujet derrière le verbe sans utiliser de pronom de reprise:
+          </h2>
+
+          <h3>
+            Ex.: Que pensent tes amies de ta nouvelle voiture ?<br />
+
+            Où sont les pièces de rechange? <br />
+            Quels sont vos autres moyens de transport?
+          </h3>
+
+          <h2>
+            2. Si l'interrogation porte sur le sujet, on emploie qu'est-ce qui
+            ou qui sans inversion.
+          </h2>
+
+          <h3>
+            Ex.: Qui est ton garagiste? <br />
+            Qu'est-ce qui ne fonctionne pas?
+          </h3>
+
+          <h2>
+            3. Si la question partielle porte sur le sujet, le COD ou le COI, Il
+            faut faire attention à l'utilisation de « qui, que et quoi » dans
+            l'interrogation avec « est-ce que ».
+          </h2>
+
+          <h3>
+            Ex.: Qui aime prendre le bus? <br />
+            Qu'est-ce qui pose encore problème? <br />
+            Qui est-ce que Bernard conduit à l'école ? <br />
+            Qu'est-ce que tu apprends? <br />
+            A qui est-ce que cette mobylette appartient? <br />
+            De quoi est-ce que tu as besoin?
+          </h3>
+          <h2>
+            4. Si la question porte sur un CC, on la pose à l'aide d'un adverbe
+            interrogatif adéquat (quand,comment, pourquoi, où...):
+          </h2>
+
+          <h3>Ex.: Quand est-ce qu'elle passe son permis?</h3>
+          <h2>
+            Normalement dans une interrogation partielle, on inverse le sujet
+            avec le verbe. P.ex, :
+          </h2>
+          <h3>
+            La circulation est très dense aujourd’hui <br />
+            ==> La circulation est-elle très dense aujourd’hui ? <br />
+            ==> (Est-ce que la circulation est très dense aujourd’hui ?)
+          </h3>
+
+          <h2>
+            On fait porter l'interrogation sur une partie de la phrase. On
+            répond en donnant l'information qui, que, quoi, où, quand, pourquoi,
+            comment, quel ou quelle.
+          </h2>
+          <h3>
+            Par exemple: Comment s'appelle-t-il? ==> Il s'appelle Gilles
+            (nouvelle information).
+          </h3>
+          <h2 class="backgreen">Quel ou lequel?</h2>
+          <h3>
+            Avec les mots
+            <span class="red"
+              >"quel, quelle, quels, quelles" et "lequel,lequelle, lequels et
+              lequelles"</span
+            >
+            on demande de faire un choix parmi plusieurs possibilités.
+          </h3>
+          <h3>
+            Par exemple : Quel professeur t'as puni? / Lequel t'as puni? <br />
+            De quels films parlez-vous? / De lequels parlez-vous?
+          </h3>
+          <h3 class="red">
+            Le mot "quel" se place devant un nom avec lequel il s'accorde en
+            genre et en nombre. Il se place aussi devant le verbe "être".
+          </h3>
+          <h3>
+            P.ex.: Quel est ton nom? <br />
+            Quels sont tes loisirs?
+          </h3>
+          <h3>
+            Les mots "lequel,lequelle, lequels et lequelles"
+            <span class="red">remplacent</span> un mot.
+          </h3>
+          <h3>
+            P.ex.: J'ai acheté plusieurs produits: du lait, du fromage,... .<br />Quells
+            produits as-tu acheté?<br />Lequels as-tu achetés?<br />
+            à la cantine on propose 3 menus. Lequel as-tu pris?<br />
+
+            Je m'intéresse particulièrement aux nouvelles branches.<br />
+            à quelles branches t'intéresses-tu particulièrement?<br />
+          </h3>
+          <h3 class="red">
+            à +<span>+</span><span class="red">lesquelles </span>= Auxquelles
+            t'intéresses-tu particulièrement?
+          </h3>
+          <br />
+          <h3 class="blue">Remarque: à + le = au, à + les = aux</h3>
+          <h3>
+            Nous constatons alors que "lequel,..." se place devant un verbe.
+          </h3>
+
+          <h2 class="backgreen">L'interrogation par inversion complexe.</h2>
+          <table>
+            <tr>
+              <th>Le sujet est un pronom</th>
+              <th>Le sujet est un nom</th>
+            </tr>
+            <tr>
+              <td>Qui est-ce que tu as rencontré? ==> Qui as-tu rencontré ?</td>
+              <td>
+                Qui est-ce que le policier doit verbaliser ? ==> Qui le policier
+                doit-il verbaliser?
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Qu'est-ce que vous devez faire ? ==> Que devez-vous faire ?
+              </td>
+              <td>
+                A qui est-ce que ce panneau de signalisation s'adresse? ==> A
+                qui ce panneau de signalisation s'adresse-t-il ?
+              </td>
+            </tr>
+            <tr>
+              <td>A qui est-ce qu'elle pense? ==> À qui pense-t-elle ?</td>
+              <td>
+                Quand est-ce qu'un véhicule d'urgence a la priorité absolue ?
+                ==> Quand un véhicule d'urgence a-t-il la priorité absolue ?
+              </td>
+            </tr>
+            <tr>
+              <td>De quoi est-ce qu'elle parle ? ==> De quoi parle-t-elle ?</td>
+              <td>
+                Où est-ce qu'une voiture doit s'arrêter en cas de contrôle ? ==>
+                Où une voiture doit-elle s'arrêter en cas de contrôle?
+              </td>
+            </tr>
+            <tr>
+              <td>Quand est-ce qu'il reviendra? ==> Quand reviendra-t-il ?</td>
+              <td>
+                Quelle ligne de bus est-ce que Bertrand emprunte tous les jours?
+                ==> Quelle ligne de bus Bertrand emprunte-t-il tous les jours?
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Quelle décision est-ce que je dois prendre ? ==> Quelle décision
+                dois-je prendre ?
+              </td>
+              <td>
+                Que mange Alice <br />
+                Où est la zone de danger <br />
+                Où sont les clés?
+              </td>
+            </tr>
+          </table>
+
+          <h2>
+            Retenons <br />
+
+            Quand le sujet est un pronom :
+          </h2>
+          <h3>
+            -on place ce pronom derrière le verbe conjugué <br />
+            -on le rattache au verbe conjugué par un trait d'union <br />
+            -on ajoute unt de prononciation entre deux voyelles
+          </h3>
+          <h2>Quand le sujet est un nom:</h2>
+          <h3>
+            -on procède comme pour un pronom <br />
+            -on ajoute le nom devant le verbe conjugué
+          </h3>
+          <!-- <nav class="nav1">
+            <a href="posmnt.html">posement de questions</a>
+          </nav> -->
+        </article>
+      </section>
+      <script type="text/javascript">
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        };
+      </script>
+      <nav>
+        <a class="menu" href="index.html">HUB</a>
+        <a class="menu" href="fdm.html">fonction de mots</a>
+        <a class="menu active" href="tdp.html">les types de phrases</a>
+        <a class="menu" href="voc.html">vocabulaire</a>
+        <a class="menu" href="negot.html">negation</a>
+        <a class="menu" href="temps.html">Les temps "simples" et "composés"</a>
+        <a class="menu" href="pardv.html">les particularités de verbes</a>
+        <a class="menu" href="conjg.html">conjugaison</a>
+        <a class="menu" href="utltemps.html">l'utilisation des temps</a>
+        <a class="menu" href="autres.html">autres</a>
+      </nav>
+    </div>
+  </body>
+</html>
