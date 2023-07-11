@@ -29,7 +29,7 @@ section {
 li {
   text-align: center;
   font-size: 15px;
-  margin: 20px;
+  margin: 20px 30%;
   margin-top: 0;
   text-align: center;
 
@@ -145,7 +145,7 @@ br {
 h3 {
   text-align: center;
   font-size: 15px;
-  margin: 20px 20%;
+  margin: 20px 30%;
   margin-top: 0;
   text-align: center;
 
@@ -154,7 +154,8 @@ h3 {
   -webkit-text-fill-color: transparent;
 }
 @media (max-width: 800px) {
-  h3 {
+  h3,
+  li {
     margin: 20px 10%;
   }
 }
@@ -416,8 +417,14 @@ img {
 }
 
 .imgvoc3 {
-  width: 50%;
+  width: 40%;
   margin: 20px auto;
+}
+@media (max-width: 1000px) {
+  .imgvoc3 {
+    height: 90%;
+    width: 90%;
+  }
 }
 button {
   width: 30%;
