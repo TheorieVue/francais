@@ -191,11 +191,17 @@ table {
   text-align: center;
   padding: 10px 200px;
 }
-
+.tbl6 {
+  flex: auto;
+  text-align: center;
+  table-layout: auto;
+}
+.tbl2 td {
+  width: 16.6666%;
+}
 .tbl2 {
   flex: auto;
   text-align: center;
-
   table-layout: auto;
 }
 .tbl2 td {
@@ -234,6 +240,9 @@ table {
   text-align: center;
   padding: 10px auto;
   table-layout: auto;
+}
+.tbl4 td {
+  width: 25%;
 }
 @media (max-width: 1000px) {
   .tbl4 {
