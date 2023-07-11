@@ -1,530 +1,143 @@
-@import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href:"favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon(1).ico" />
+    <link href="favicon(1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>LE CONDITIONNEL PRESENT</title>
+  </head>
 
-html,
-* {
-  font-family: "Domine", serif;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  box-sizing: border-box;
-  background-color: Cornsilk;
-}
+  <body>
+    <div id="preLoader"></div>
+    <script>
+      var loader = document.getElementById("preLoader");
 
-body {
-  width: 100%;
-  padding-bottom: 50px;
-}
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <div>
+      <header>
+        <img
+          class="headerimg"
+          src="https://th.bing.com/th/id/R.fe036d83f26995c7d2f6512eeafcb074?rik=6RyQ3RT0x6WypA&riu=http%3a%2f%2f1.bp.blogspot.com%2f_kk0cAfja3x8%2fTUsq_w0_1gI%2fAAAAAAAABBA%2feloiWCODRsA%2fs1600%2ffrancais.jpg&ehk=Emkoomb20TcUfsYTXrGz3ClY1XtRTgFpPJg6%2fyhuagk%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        />
+        <h1>LE CONDITIONNEL</h1>
+      </header>
+      <section>
+        <article>
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <div id="blob"></div>
+          <script src="scripts.js"></script>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <h2>1. Le conditionnel présent</h2>
+          <h3>
+            Il est formé avec le <span class="red">même</span> radical que le
+            futur simple (infinitif). Les terminaisons du conditionnel présent
+            sont les <span class="red">mêmes</span> que celles de l'imparfait.
+          </h3>
+          <h2>Utilisation</h2>
+          <h3>
+            Le conditionnel peut être employé comme temps ou comme mode. Dans le
+            premier cas, il permet d’exprimer le futur dans le passé. Dans le
+            second cas, il exprime l’éventualité, l’imaginaire (une action
+            future dont la réalisation n’est pas certaine car soumise à une
+            condition). <br />Apprends les règles d’emploi et de conjugaison du
+            conditionnel en français grâce à nos explications simples et claires
+            accompagnées d’exemples et entraîne-toi à l’employer correctement
+            avec nos exercices !
+          </h3>
 
-section {
-  display: grid;
-  place-items: center;
-  align-content: center;
-}
+          <h2>Recevoir</h2>
+          <h3>
+            Futur simple = il recevra <br />
+            imparfait = il recevait <br />
+            cond.pré. = il recevrait
+          </h3>
+          <h2>2. Conditionnel passé</h2>
 
-.xxxxxx {
-  position: fixed;
-  width: 100%;
-}
+          <h3>
+            C'est le temps composé de conditionnel présent. L'auxiliaire est
+            conjuguée au conditionnel présent et on y rajoute le p.p.
+          </h3>
+          <h2>Recevoir</h2>
 
-li {
-  text-align: center;
-  font-size: 15px;
-  margin: 20px 30%;
-  margin-top: 0;
-  text-align: center;
+          <h3>
+            cond.pré. avoir : il aurait<br />
+            p.p. recevoir : reçu<br />
+            Cond.Passé : Il aurait reçu
+          </h3>
+          <h2>Quand employer le conditionnel?</h2>
 
-  background: linear-gradient(to right, rgb(12, 0, 80), rgb(129, 112, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-ul {
-  text-align: center;
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 90%;
-}
-
-article {
-  border-bottom: rgb(0, 55, 255);
-}
-#preLoader {
-  background: #000 url(images/preloader.gif) no-repeat center center;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-}
-.headerimg {
-  font-family: "Domine", serif;
-  width: 75%;
-  margin: 0 auto;
-  padding: 20px 0;
-  height: 400px;
-  display: block;
-  border: none;
-}
-
-@media (width<800px) {
-  .headerimg {
-    height: 50%;
-  }
-}
-
-.red {
-  color: red;
-  text-align: center;
-  background: red;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline red;
-}
-h2 .red {
-  font-size: 25px;
-  background: red;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.blue {
-  color: blue;
-  background: blue;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.green {
-  color: green;
-  background: green;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline red;
-}
-.yellow {
-  color: rgb(60, 255, 0);
-  background: rgb(115, 255, 0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-h2.backgreen {
-  background: rgb(255, 153, 0);
-  -webkit-text-fill-color: rgb(255, 255, 255);
-  padding: 10px 0;
-}
-h3.backgreen {
-  background: rgb(0, 145, 39);
-  -webkit-text-fill-color: rgb(47, 0, 255);
-  padding: 10px 0;
-  font-size: 18px;
-  margin: 10px 50px;
-}
-
-h1 {
-  font-size: 30px;
-  text-align: center;
-  background-color: red;
-  color: white;
-  padding: 10px 0;
-  margin-bottom: 10px;
-}
-h2 {
-  font-size: 25px;
-  margin: 20px;
-  margin-top: 0;
-  text-align: center;
-  text-decoration: underline 1.5px;
-  background: linear-gradient(to right, cyan, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-br {
-  text-align: center;
-}
-h3 {
-  text-align: center;
-  font-size: 15px;
-  margin: 20px 30%;
-  margin-top: 0;
-  text-align: center;
-
-  background: linear-gradient(to right, rgb(12, 0, 80), rgb(129, 112, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@media (max-width: 800px) {
-  h3,
-  li {
-    margin: 20px 10%;
-  }
-}
-span {
-  width: 100%;
-  padding: 10px 0;
-  text-align: center;
-}
-
-th {
-  padding: 20px 0;
-
-  font-size: 30px;
-  border: 3px solid rgb(0, 74, 20);
-  background: linear-gradient(to right, rgb(74, 2, 59), rgb(120, 135, 4));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-td {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  margin: 20px 0;
-  border: 2px solid red;
-  background: linear-gradient(to right, rgb(2, 51, 51), rgb(2, 55, 5));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-table {
-  width: 100%;
-  text-align: center;
-  padding: 10px 200px;
-}
-
-.tbl2 {
-  flex: auto;
-  text-align: center;
-
-  table-layout: auto;
-}
-.tbl2 td {
-  width: 50%;
-}
-@media (max-width > 800px) {
-  .tbl3 {
-    width: 20%;
-    margin: 0;
-    padding: 0;
-    min-width: 10px;
-  }
-}
-.tbl3 td {
-  width: 33%;
-}
-
-.tbl3 {
-  width: auto;
-  flex: auto;
-  text-align: center;
-  table-layout: auto;
-}
-
-@media (max-width > 800px) {
-  .tbl3 {
-    width: 20%;
-    margin: 0;
-    padding: 0;
-    min-width: 10px;
-  }
-}
-
-.tbl4 {
-  flex: auto;
-  text-align: center;
-  padding: 10px auto;
-  table-layout: auto;
-}
-@media (max-width: 1000px) {
-  .tbl4 {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-}
-@media (width< 1000px) {
-  table,
-  td,
-  th {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0px;
-    width: auto;
-  }
-}
-
-nav {
-  overflow: hidden;
-}
-.active {
-  background-color: #b44b87;
-}
-a {
-  border-radius: 5px;
-}
-.menu {
-  border-radius: 5px;
-}
-.menu:hover {
-  color: rgb(234, 255, 0);
-}
-nav a {
-  display: block;
-  width: 10%;
-  height: 100px;
-  float: left;
-  font-size: 20px;
-  border: 1px solid black;
-  background-color: darkcyan;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  padding: 20px 0;
-  margin: 40px 0;
-  transition: all 0.25s ease;
-}
-.nav1 a {
-  width: 33.333333%;
-  background-color: #7cfc00;
-  margin: 10px auto 10px 33%;
-}
-
-.nav2 a {
-  width: 50%;
-  background-color: #7cfc00;
-}
-.nav2 a:hover {
-  background-color: #fc8b00;
-}
-
-.nav3 a {
-  width: 33.3333333%;
-  background-color: #7cfc00;
-}
-.nav3 a:hover {
-  background-color: #fc8b00;
-}
-
-.termverb {
-  width: 50%;
-  background-color: #7cfc00;
-  margin: 0;
-  height: 75px;
-}
-.termverb:hover {
-  background-color: #fc8b00;
-}
-
-@media (max-width: 1200px) {
-  nav a {
-    width: 20%;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    margin-bottom: 0cm;
-  }
-}
-.autres {
-  display: inline-block;
-  flex: auto;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  background-color: #7cfc00;
-}
-.autres:hover {
-  background-color: #fc8b00;
-  color: aqua;
-}
-
-nav a:hover {
-  background-color: rgb(220, 20, 60);
-  cursor: pointer;
-  border-radius: 20px;
-  color: aqua;
-}
-.typesdephr,
-.nega {
-  display: inline-block;
-  width: 30%;
-  position: relative;
-  left: 5%;
-  font-size: 20px;
-  border: 1px solid black;
-  background-color: #7cfc00;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  padding: 30px 0;
-  margin: 20px 0;
-}
-@media (max-width: 1000px) {
-  .nega {
-    width: 25%;
-    display: flex;
-  }
-}
-.nega:hover {
-  background-color: #fc8b00;
-  border-radius: 20px;
-}
-@media (max-width: 1200px) {
-  .typesdephr {
-    width: 30%;
-  }
-}
-
-.textnext {
-  display: inline-block;
-  width: 30%;
-  background-color: Cornsilk;
-  margin: 0;
-}
-.center {
-  text-align: center;
-}
-.left {
-  text-align: left;
-  padding: 0 200px;
-  color: blue;
-}
-.border {
-  display: block;
-  border: 2px solid red;
-  max-width: 700px;
-  margin: 10px auto;
-  padding: 10px;
-}
-li {
-  list-style-position: inside;
-  background: linear-gradient(to right, rgb(74, 2, 59), rgb(120, 135, 4));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.line-trough {
-  text-decoration: line-through;
-}
-.tdbig {
-  font-size: 25px;
-  text-decoration: underline;
-  text-decoration-style: double;
-}
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  width: 30%;
-  border: 3px solid rgb(206, 18, 18);
-}
-
-.imgvoc3 {
-  width: 40%;
-  margin: 20px auto;
-}
-@media (max-width: 1000px) {
-  .imgvoc3 {
-    height: 90%;
-    width: 90%;
-  }
-}
-button {
-  width: 30%;
-  padding: 20px;
-  flex: auto;
-  border: solid rgb(55, 255, 0) 2px;
-  background-color: rgb(189, 224, 255);
-  transition: all 0.5s ease;
-  margin: 20px 0;
-  cursor: pointer;
-  flex-wrap: wrap;
-}
-
-.but {
-  display: flex;
-  width: 200px;
-  margin: 0 auto;
-}
-
-button:hover {
-  background-color: rgb(60, 164, 255);
-  border: solid yellow 5px;
-  border-radius: 50px;
-  font-size: 20px;
-}
-
-::-webkit-scrollbar {
-}
-#scrollPath {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 10px;
-  /*height: 100%;*/
-  background: rgba(255, 255, 2555, 0.05);
-}
-
-#progressbar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 10px;
-  height: 100%;
-  background: linear-gradient(to top, #008aff, #00ffe7);
-  animation: animate 5s linear infinite;
-}
-@keyframes animate {
-  0%,
-  100% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(360deg);
-  }
-}
-#progressbar:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #008aff, #00ffe7);
-  filter: blur(10px);
-}
-#progressbar:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #008aff, #00ffe7);
-  filter: blur(30px);
-}
-
-/*@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-
-  50% {
-    scale: 1 1.5;
-  }
-
-  to {
-    rotate: 360deg;
-  }
-}
-
-#blob {
-  background-color: white;
-  height: 12vmax;
-  aspect-ratio: 1;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  border-radius: 50%;
-  background: linear-gradient(to right, rgb(0, 60, 255), rgb(255, 0, 251));
-  animation: rotate 20s infinite;
-  opacity: 0.25;
-}*/
+          <ul>
+            <li>
+              expression d’un souhait, d’une possibilité ou d’une hypothèse dans
+              le présent ou le futur (conditionnel présent) et dans le passé
+              (conditionnel passé). <br />
+              Ex : Michel aimerait être en vacances.
+            </li>
+            <li>
+              le conditionnel-temps exprime le futur dans le passé. <br />Ex :
+              Michel pensait qu’il pourrait partir en voyage.
+            </li>
+            <li>
+              emploi dans les phrases hypothétiques (voir la proposition
+              conditionnelle). <br />
+              Ex : S’il partait pour les Caraïbes, il pourrait aller à la plage
+              tous les jours.
+            </li>
+            <li>
+              formule de politesse à la forme interrogative. <br />
+              Ex : Michel, est-ce que tu pourrais venir au tableau ?
+            </li>
+          </ul>
+          <img
+            src="conditionnel bbr1 p 201.jpg"
+            alt="UNE PHOTO DE TEORIE SUR LE CONDITIONNEL"
+          />
+        </article>
+      </section>
+      <script type="text/javascript">
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        };
+      </script>
+      <nav>
+        <a class="menu" href="index.html">HUB</a>
+        <a class="menu" href="fdm.html">fonction de mots</a>
+        <a class="menu" href="tdp.html">les types de phrases</a>
+        <a class="menu" href="voc.html">vocabulaire</a>
+        <a class="menu" href="negot.html">negation</a>
+        <a class="menu" href="temps.html">Les temps "simples" et "composés"</a>
+        <a class="menu" href="pardv.html">les particularités de verbes</a>
+        <a class="menu" href="conjg.html">conjugaison</a>
+        <a class="menu" href="utltemps.html">l'utilisation des temps</a>
+        <a class="menu" href="autres.html">autres</a>
+      </nav>
+      <footer>
+        <a
+          href="https://francais.lingolia.com/fr/grammaire/les-verbes/conditionnel"
+          >Source</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
