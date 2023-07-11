@@ -28,9 +28,8 @@ section {
 
 li {
   text-align: center;
-
   font-size: 15px;
-  margin: 20px 30%;
+  margin: 20px;
   margin-top: 0;
   text-align: center;
 
@@ -145,9 +144,8 @@ br {
 }
 h3 {
   text-align: center;
-
   font-size: 15px;
-  margin: 20px 30%;
+  margin: 20px 20%;
   margin-top: 0;
   text-align: center;
 
@@ -155,7 +153,11 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+@media (max-width: 800px) {
+  h3 {
+    margin: 20px 10%;
+  }
+}
 span {
   width: 100%;
   padding: 10px 0;
@@ -192,27 +194,31 @@ table {
 .tbl2 {
   flex: auto;
   text-align: center;
-  padding: 10px 100px;
+
   table-layout: auto;
 }
 .tbl2 td {
   width: 50%;
 }
+@media (max-width > 800px) {
+  .tbl3 {
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    min-width: 10px;
+  }
+}
 .tbl3 td {
   width: 33%;
 }
-@media (max-width: 800px) {
-  .tbl2 {
-    margin: 0;
-    padding: 0;
-  }
-}
+
 .tbl3 {
   width: auto;
   flex: auto;
   text-align: center;
   table-layout: auto;
 }
+
 @media (max-width > 800px) {
   .tbl3 {
     width: 20%;
@@ -278,8 +284,8 @@ nav a {
 }
 .nav1 a {
   width: 33.333333%;
-  flex: auto;
   background-color: #7cfc00;
+  margin: 10px auto 10px 33%;
 }
 
 .nav2 a {
