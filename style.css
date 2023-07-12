@@ -196,8 +196,24 @@ table {
   text-align: center;
   table-layout: auto;
 }
-.tbl2 td {
+.tbl6 td {
   width: 16.6666%;
+}
+.tbl5 {
+  flex: auto;
+  text-align: center;
+  table-layout: auto;
+}
+.tbl5 td {
+  width: 20%;
+}
+.tbl7 {
+  flex: auto;
+  text-align: center;
+  table-layout: auto;
+}
+.tbl7 td {
+  width: 14.28%;
 }
 .tbl2 {
   flex: auto;
