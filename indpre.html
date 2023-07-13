@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href:"favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon(1).ico" />
+    <link href="favicon(1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>LES PRONOMS</title>
+  </head>
+
+  <body>
+    <div>
+      <div id="preLoader"></div>
+      <script>
+        var loader = document.getElementById("preLoader");
+
+        window.addEventListener("load", function () {
+          loader.style.display = "none";
+        });
+      </script>
+      <header>
+        <img
+          class="headerimg"
+          src="https://th.bing.com/th/id/R.fe036d83f26995c7d2f6512eeafcb074?rik=6RyQ3RT0x6WypA&riu=http%3a%2f%2f1.bp.blogspot.com%2f_kk0cAfja3x8%2fTUsq_w0_1gI%2fAAAAAAAABBA%2feloiWCODRsA%2fs1600%2ffrancais.jpg&ehk=Emkoomb20TcUfsYTXrGz3ClY1XtRTgFpPJg6%2fyhuagk%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        />
+        <h1>Indicatif present</h1>
+      </header>
+      <section>
+        <article>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <h2>Utilisation</h2>
+          <ul>
+            <li>
+              Fait ou on action qui se déroule au moment où l’on s’exprime.
+              <br />
+              P.ex. : Marc range ses affaires pendant que je travaille. <br />
+              Il fait beau aujourd’hui. <br />
+              Elle se repose depuis deux heures.
+            </li>
+            <li>
+              Fait passé ‘’come si on y était’’ <br />
+              P.ex. : Je me revois enfant, quand j’apprends à nager. <br />
+              Nous discutons tranquillement. Soudainement, il se lève et part.
+            </li>
+            <li>
+              Vérité scientifique <br />
+              P.ex. : La terre tourne autour du Soleil. <br />
+              Balzac nait(est né) en 1799 et meurt(est mort) en 1850. <br />
+              L’eau et l’huile ne se mélangent pas.
+            </li>
+            <li>
+              Fait habituel <br />
+              P.ex. : Au petit déjeuner, je mange des céréales. <br />
+              Je me lave les mains avant chaque repas. <br />
+              Elle dort sans oreiller.
+            </li>
+          </ul>
+          <h2>Conjugaison</h2>
+
+          <table class="tbl3">
+            <tr>
+              <th>Verbes</th>
+              <th>1er groupe(-er)</th>
+              <th>1er groupe(-er)</th>
+              <th>2e groupe(ir)</th>
+              <th>2e groupe(ir)</th>
+            </tr>
+            <tr>
+              <td>Je</td>
+              <td>-e</td>
+              <td>aime</td>
+              <td>-s</td>
+              <td>finis</td>
+            </tr>
+            <tr>
+              <td>Tu</td>
+              <td>-es</td>
+              <td>aimes</td>
+              <td>-is</td>
+              <td>finis</td>
+            </tr>
+            <tr>
+              <td>Il</td>
+              <td>-e</td>
+              <td>aime</td>
+              <td>-it</td>
+              <td>finit</td>
+            </tr>
+            <tr>
+              <td>Nous</td>
+              <td>-ons</td>
+              <td>aimons</td>
+              <td>-issons</td>
+              <td>finissons</td>
+            </tr>
+            <tr>
+              <td>Vous</td>
+              <td>-ez</td>
+              <td>aimez</td>
+              <td>-issez</td>
+              <td>finissez</td>
+            </tr>
+            <tr>
+              <td>Ils</td>
+              <td>-ent</td>
+              <td>aiment</td>
+              <td>-issent</td>
+              <td>finissent</td>
+            </tr>
+          </table>
+          <table class="tbl7">
+            <tr>
+              <th>Personnes</th>
+              <th>générique</th>
+              <th>générique</th>
+              <th>-dre</th>
+              <th>-dre</th>
+              <th>pouvoir, valoir, vouloir</th>
+              <th>pouvoir, valoir, vouloir</th>
+            </tr>
+            <tr>
+              <td>Je</td>
+              <td>-s</td>
+              <td>cours</td>
+              <td>-ds</td>
+              <td>prends</td>
+              <td>-x</td>
+              <td>peux</td>
+            </tr>
+            <tr>
+              <td>Tu</td>
+              <td>-s</td>
+              <td>cours</td>
+              <td>-ds</td>
+              <td>prends</td>
+              <td>-x</td>
+              <td>peux</td>
+            </tr>
+            <tr>
+              <td>Il</td>
+              <td>-t</td>
+              <td>court</td>
+              <td>-d</td>
+              <td>prend</td>
+              <td>-t</td>
+              <td>peut</td>
+            </tr>
+            <tr>
+              <td>Nous</td>
+              <td>-ons</td>
+              <td>courons</td>
+              <td>-ons</td>
+              <td>prenons</td>
+              <td>-ons</td>
+              <td>pouvons</td>
+            </tr>
+            <tr>
+              <td>Vous</td>
+              <td>-ez</td>
+              <td>courez</td>
+              <td>-ez</td>
+              <td>prenez</td>
+              <td>-ez/td></td>
+              <td>pouvez</td>
+            </tr>
+            <tr>
+              <td>Ils</td>
+              <td>-ent</td>
+              <td>courent</td>
+              <td>-ent</td>
+              <td>prennent</td>
+              <td>-ent</td>
+              <td>peuvent</td>
+            </tr>
+          </table>
+          <h2>Exceptions</h2>
+          <ul>
+            <li>Aller => je vais</li>
+            <li>faire => Vous faites</li>
+            <li>Dire => nous disons (1 -s)</li>
+            <li>Savoir => je sais</li>
+            <li>Ouvrir => j’ouvre</li>
+            <li>Cueillir => tu cueilles</li>
+            <li>Recevoir => tu reçois</li>
+            <li>Craindre => ils craignent</li>
+          </ul>
+          <h2>Auxiliaires</h2>
+          <table class="tbl3">
+            <tr>
+              <th>Personnes</th>
+              <th>Avoir</th>
+              <th>Être</th>
+            </tr>
+            <tr>
+              <td>Je</td>
+              <td>ai</td>
+              <td>suis</td>
+            </tr>
+            <tr>
+              <td>Tu</td>
+              <td>as</td>
+              <td>es</td>
+            </tr>
+            <tr>
+              <td>Il</td>
+              <td>a</td>
+              <td>est</td>
+            </tr>
+            <tr>
+              <td>Nous</td>
+              <td>avons</td>
+              <td>sommes</td>
+            </tr>
+            <tr>
+              <td>Vous</td>
+              <td>avez</td>
+              <td>êtes</td>
+            </tr>
+            <tr>
+              <td>Ils</td>
+              <td>ont</td>
+              <td>sont</td>
+            </tr>
+          </table>
+
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <div id="blob"></div>
+          <script src="scripts.js"></script>
+        </article>
+      </section>
+      <script type="text/javascript">
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        };
+      </script>
+      <nav>
+        <a class="menu" href="index.html">HUB</a>
+        <a class="menu" href="fdm.html">fonction de mots</a>
+        <a class="menu" href="tdp.html">les types de phrases</a>
+        <a class="menu" href="voc.html">vocabulaire</a>
+        <a class="menu" href="negot.html">negation</a>
+        <a class="menu" href="temps.html">Les temps "simples" et "composés"</a>
+        <a class="menu" href="pardv.html">les particularités de verbes</a>
+        <a class="menu" href="conjg.html">conjugaison</a>
+        <a class="menu" href="utltemps.html">l'utilisation des temps</a>
+        <a class="menu" href="autres.html">autres</a>
+      </nav>
+      <footer></footer>
+    </div>
+  </body>
+</html>
