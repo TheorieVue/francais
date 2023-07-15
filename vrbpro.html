@@ -15,15 +15,15 @@
   </head>
 
   <body>
-    <div id="preLoader"></div>
-    <script>
-      var loader = document.getElementById("preLoader");
-
-      window.addEventListener("load", function () {
-        loader.style.display = "none";
-      });
-    </script>
     <div>
+      <div id="preLoader"></div>
+      <script>
+        var loader = document.getElementById("preLoader");
+
+        window.addEventListener("load", function () {
+          loader.style.display = "none";
+        });
+      </script>
       <header>
         <img
           class="headerimg"
@@ -31,15 +31,116 @@
         />
         <h1>VERBES PRONOMINAUX</h1>
       </header>
-
       <section>
         <article>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <h3>
+            Les verbes pronominaux, dont il existe plusieurs catégories, sont
+            des verbes qui se construisent avec un pronom réfléchi (me, te, se,
+            nous, vous) de la même personne que le sujet. Ce pronom se place
+            toujours avant le verbe.
+          </h3>
+          <h3>
+            Les verbes pronominaux sont des verbes précédés d’un pronom réfléchi
+            de la même personne que le sujet. Certains verbes sont uniquement
+            pronominaux, tels que se baigner, s’écrier, s’en aller, s’enfuir,
+            s’évanouir, s’envoler, se fier à quelqu’un, se méfier de quelqu’un,
+            etc.
+            <br />
+            De nombreux verbes existent aux deux formes, non pronominales et
+            pronominales. La forme pronominale nuance ou change le sens du verbe
+            simple. Il y a ainsi :
+          </h3>
+          <ul>
+            <li>
+              des verbes pronominaux de sens réfléchi (se lever, s’inscrire, se
+              coiffer, …)
+            </li>
+            <li>
+              des verbes pronominaux de sens réciproque (se parler, se
+              téléphoner, se rencontrer, …)
+            </li>
+            <li>
+              des verbes pronominaux de sens passif (se prononcer, se préparer,
+              …)
+            </li>
+            <li>
+              des verbes qui ont un sens différent à la forme pronominale
+              (passer/se passer, trouver/se trouver, …)
+            </li>
+          </ul>
+          <h2>Comment conjuguer les verbes pronominaux ?</h2>
+          <ul>
+            <li>
+              On conjugue le verbe en ajoutant un pronom réfléchi de la même
+              personne que le sujet. Le pronom réfléchi se place toujours entre
+              le pronom personnel (sujet) et le verbe. <br />
+              Exemple : Je me suis promené en ville.
+            </li>
+            <li>
+              Lorsque la première lettre du verbe est une voyelle, il y a
+              élision des pronoms réfléchis me/te/se (le e s’efface et est
+              remplacé par une apostrophe). <br />
+              Exemple : Tu t’es promené en ville.
+            </li>
+            <li>
+              S’il y a négation, le ne se place devant le pronom réfléchi et la
+              seconde partie de la négation derrière le verbe conjugué, entre
+              l’auxiliaire et le participe passé dans le cas d’un temps composé.
+              <br />
+              Exemple : Je ne me suis pas promené en ville.
+            </li>
+          </ul>
+          <h2>Accord du participe passé</h2>
+          <h3>
+            Les verbes pronominaux construisent toujours leur passé composé avec
+            l’auxiliaire être. Le participe passé s’accorde en général avec le
+            sujet.
+
+            <br />
+            Exemple : Nous nous sommes levés très tôt.
+            <br class="paus" />
+            Mais il ne s’accorde pas lorsque le verbe est suivi d’un COD.
+
+            <br />
+            Exemple : Elle s’est lavé les mains. (Elle s’est lavé quoi ? → les
+            mains) → mais elle s’est lavée.
+            <br class="paus" />
+            Attention : Le participe passé ne s’accorde jamais avec le
+            complément d’objet indirect (COI).
+            <br />
+            Exemple : Marie et Laurent se sont téléphoné. → se = complément
+            d’objet indirect (téléphoner à qui ?)
+            <br class="paus" />
+            Les participes passés des verbes suivants ne s’accordent donc jamais
+            : se téléphoner, se parler, se mentir, se plaire
+            (complaire/déplaire), se sourire, se rire, se nuire, se succéder, se
+            suffire, se ressembler, s’en vouloir.
+            <br />
+            En cas de doute, on peut utiliser une petite astuce pour savoir si
+            le verbe admet ou non un COI : Il suffit de transformer la phrase en
+            remplaçant le pronom réfléchi par le complément, comme indiqué
+            ci-dessous.
+
+            <br />
+            Exemple : Elles se sont souri → Elles ont souri à qui ? = à
+            elles-mêmes
+          </h3>
+
+          <a
+            class="midle"
+            href="https://www.conjugaisonfrancaise.com/verbes/liste-verbes-pronominaux.html"
+            target="_blank"
+            >==> Tous les verbes pronominaux.</a
+          >
+
           <div id="progressbar"></div>
           <div id="scrollPath"></div>
-          <h2>
-            Les verbes pronominaux se conjuguent toujours avec l'auxiliare
-            "être"
-          </h2>
+          <div id="blob"></div>
+          <script src="scripts.js"></script>
         </article>
       </section>
       <script type="text/javascript">
