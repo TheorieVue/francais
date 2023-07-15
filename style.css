@@ -153,6 +153,13 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.midle {
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 30%;
+  margin-top: 0;
+  text-align: center;
+}
 @media (max-width: 800px) {
   h3,
   li {
@@ -283,6 +290,7 @@ nav {
 }
 a {
   border-radius: 5px;
+  color: #000000;
 }
 .menu {
   border-radius: 5px;
