@@ -223,14 +223,7 @@ table {
 .tbl2 td {
   width: 50%;
 }
-@media (max-width > 800px) {
-  .tbl3 {
-    width: 20%;
-    margin: 0;
-    padding: 0;
-    min-width: 10px;
-  }
-}
+
 .tbl3 td {
   width: 33%;
 }
@@ -241,9 +234,9 @@ table {
   table-layout: auto;
 }
 
-@media (max-width > 800px) {
-  .tbl3 {
-    width: 20%;
+@media (max-width: 800px) {
+  .tbl3 td {
+    width: 10%;
     margin: 0;
     padding: 0;
     min-width: 10px;
@@ -263,7 +256,7 @@ table {
   .tbl4 {
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: 20%;
   }
 }
 @media (width< 1000px) {
@@ -277,6 +270,11 @@ table {
   }
 }
 
+.paus {
+  content: "A";
+  display: block;
+  margin-top: 2.5em;
+}
 nav {
   overflow: hidden;
 }
