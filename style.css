@@ -256,7 +256,7 @@ table {
   .tbl4 {
     margin: 0;
     padding: 0;
-    width: 20%;
+    width: 100%;
   }
 }
 @media (width< 1000px) {
@@ -443,9 +443,11 @@ img {
   margin: 20px auto;
 }
 @media (max-width: 1000px) {
-  .imgvoc3 {
+  .imgvoc3,
+  img {
     height: 90%;
     width: 90%;
+    margin: 20px 0;
   }
 }
 button {
