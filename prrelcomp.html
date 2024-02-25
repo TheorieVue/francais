@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <!-- keep the line below for OpenProcessing compatibility -->
+    <script src="https://openprocessing.org/openprocessing_sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href:"favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon(1).ico" />
+    <link href="favicon(1).ico" rel="shortcut icon" type="image/x-icon" />
+    <title>pronoms relatifs composés</title>
+  </head>
+
+  <body>
+    <div>
+      <div id="preLoader"></div>
+      <script>
+        var loader = document.getElementById("preLoader");
+
+        window.addEventListener("load", function () {
+          loader.style.display = "none";
+        });
+      </script>
+      <header>
+        <img
+          class="headerimg"
+          src="https://th.bing.com/th/id/R.fe036d83f26995c7d2f6512eeafcb074?rik=6RyQ3RT0x6WypA&riu=http%3a%2f%2f1.bp.blogspot.com%2f_kk0cAfja3x8%2fTUsq_w0_1gI%2fAAAAAAAABBA%2feloiWCODRsA%2fs1600%2ffrancais.jpg&ehk=Emkoomb20TcUfsYTXrGz3ClY1XtRTgFpPJg6%2fyhuagk%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"
+        />
+        <h1>PRONOMS RELATIFS COMPOSES</h1>
+      </header>
+      <section>
+        <article>
+          <script src="scrollTo.js"></script>
+          <div class="but">
+            <button onclick="toBottom()">en bas</button>
+          </div>
+          <div id="progressbar"></div>
+          <div id="scrollPath"></div>
+          <div id="blob"></div>
+          <script src="scripts.js"></script>
+
+          <h3>
+            Si vous avez vu les pronoms simples, vous êtes prêts à voir les pr.
+            composés. Dans certaines constructions de phrases, il est nécessaire
+            de combiner plusieurs mots pour formuler des pr. composés.
+          </h3>
+          <h2>Les pronoms relatifs et les prépositions</h2>
+          <h3>
+            Derrière des prépositions, on emploie soit « qui » pour des
+            personnes, soit des pronoms composés. Ils se construisent tous de la
+            même manière.
+          </h3>
+          <table class="tbl2">
+            <tr>
+              <th>Choses</th>
+              <th>Personnes</th>
+            </tr>
+            <tr>
+              <td>préposition + lequel, laquelle, lesquels, lesquelles</td>
+              <td>préposition + qui</td>
+            </tr>
+          </table>
+          <h3>(préposition = à, pour, chez, sur,...)</h3>
+          <h2>Examples</h2>
+          <h3>
+            Ce sont les secouristes à qui on a décerné une médaille. (Décerner
+            qqch à qqn) <br class="minipaus" />
+
+            C'est la femme à qui j'ai donné la main. (donner la main à qqn)<br
+              class="minipaus"
+            />
+            C'est la maison à laquelle on a ajouté un garage. (ajouter qqch à
+            une maison)<br class="minipaus" />
+
+            C'est la table sur laquelle on a signé le traité. (signer sur une
+            table)<br class="minipaus" />
+
+            La lanceuse d'alerte grâce à qui le scandale a été découvert, se
+            cache en Suisse. (découvrir qqch grâce à qqn)<br class="minipaus" />
+
+            Le devoir pour lequel j'ai tellement révisé a été rapporté. (réviser
+            pour un devoir)<br class="minipaus" />
+
+            Nicolas a bien aimé les concerts au cours duquel il a rencontré sa
+            future épouse.
+          </h3>
+          <h2>La contraction des articles :</h2>
+          <table class="tbl3">
+            <tr>
+              <th>Préposition</th>
+              <th>article au début</th>
+              <th>article à la fin</th>
+            </tr>
+            <tr>
+              <td>grâce, face, par rapport, ... + à</td>
+              <td>lequel <br />lesquels <br />lesquelles <br />laquelle</td>
+              <td>
+                auquel <br />auxquels <br />auxquelles <br />mais: à laquelle
+              </td>
+            </tr>
+            <tr>
+              <td>
+                à coté, en face, prés, à cause, <br />au cours, au milieu, en
+                dessous, <br />au-dessus... + de
+              </td>
+              <td>lequel <br />lesquels <br />lesquelles <br />laquelle</td>
+              <td>
+                duquel <br />desquels <br />desquelles <br />
+                mais: de laquelle
+              </td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <script type="text/javascript">
+        let progress = document.getElementById("progressbar");
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function () {
+          let progressHeight = (window.pageYOffset / totalHeight) * 100;
+          progress.style.height = progressHeight + "%";
+        };
+      </script>
+      <nav>
+        <a class="menu" href="index.html">HUB</a>
+        <a class="menu" href="fdm.html">fonction de mots</a>
+        <a class="menu" href="tdp.html">les types de phrases</a>
+        <a class="menu" href="voc.html">vocabulaire</a>
+        <a class="menu" href="negot.html">negation</a>
+        <a class="menu" href="temps.html">Les temps "simples" et "composés"</a>
+        <a class="menu" href="pardv.html">les particularités de verbes</a>
+        <a class="menu" href="conjg.html">conjugaison</a>
+        <a class="menu" href="utltemps.html">l'utilisation des temps</a>
+        <a class="menu" href="autres.html">autres</a>
+      </nav>
+      <footer></footer>
+    </div>
+  </body>
+</html>
